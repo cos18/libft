@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 15:24:18 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/26 14:47:42 by sunpark          ###   ########.fr       */
+/*   Created: 2020/02/26 20:48:37 by sunpark           #+#    #+#             */
+/*   Updated: 2020/02/26 20:50:40 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t len)
+size_t	ft_strlen(const char *s)
 {
-	unsigned char	*d;
-
-	if (!dst && !src)
-		return (dst);
-	d = (unsigned char *)dst;
-	while (len--)
-	{
-		*d = *((unsigned char *)src);
-		d++;
-		src++;
-	}
-	return (dst);
+	return ((*s) ? 1 + ft_strlen(s + 1) : 0);
 }

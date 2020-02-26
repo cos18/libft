@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 15:24:18 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/26 14:47:42 by sunpark          ###   ########.fr       */
+/*   Created: 2020/02/26 22:39:49 by sunpark           #+#    #+#             */
+/*   Updated: 2020/02/26 22:41:07 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t len)
+int	ft_isprint(int c)
 {
-	unsigned char	*d;
-
-	if (!dst && !src)
-		return (dst);
-	d = (unsigned char *)dst;
-	while (len--)
-	{
-		*d = *((unsigned char *)src);
-		d++;
-		src++;
-	}
-	return (dst);
+	return (' ' <= c && c <= '~');
 }

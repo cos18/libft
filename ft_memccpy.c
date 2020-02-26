@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 15:24:18 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/26 14:47:42 by sunpark          ###   ########.fr       */
+/*   Created: 2020/02/26 13:31:19 by sunpark           #+#    #+#             */
+/*   Updated: 2020/02/26 16:04:01 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t len)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char	*d;
+	size_t	locate;
 
 	if (!dst && !src)
 		return (dst);
-	d = (unsigned char *)dst;
-	while (len--)
+	locate = 0;
+	while (locate < n)
 	{
-		*d = *((unsigned char *)src);
-		d++;
-		src++;
+		((unsigned char *)dst)[locate] = ((unsigned char *)src)[locate];
+		if (((unsigned char *)dst)[locate] == (unsigned char)c)
+			break;
+		locate++;
 	}
-	return (dst);
+	if (locate == n)
+		return ((void *)0);
+	return (dst + locate + 1);
 }

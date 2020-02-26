@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 15:24:18 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/26 14:47:42 by sunpark          ###   ########.fr       */
+/*   Created: 2020/02/26 22:51:28 by sunpark           #+#    #+#             */
+/*   Updated: 2020/02/26 22:56:02 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#ifdef LIBFT_BONUS_H
+# include "libft_bonus.h"
+#endif
 
-void	*ft_memcpy(void *dst, const void *src, size_t len)
+int	ft_toupper(int c)
 {
-	unsigned char	*d;
-
-	if (!dst && !src)
-		return (dst);
-	d = (unsigned char *)dst;
-	while (len--)
-	{
-		*d = *((unsigned char *)src);
-		d++;
-		src++;
-	}
-	return (dst);
+#ifdef LIBFT_BONUS_H
+	if (ft_islower(c) != 0)
+#else
+	if ('a' <= c && c <= 'z')
+#endif
+		c += ('A' - 'a');
+	return (c);
 }

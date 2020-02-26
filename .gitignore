@@ -1,4 +1,4 @@
-test/*
+ck_libft
 
 # Created by https://www.gitignore.io/api/c,code,macos
 # Edit at https://www.gitignore.io/?templates=c,code,macos
@@ -47,6 +47,10 @@ test/*
 *.su
 *.idb
 *.pdb
+
+# Test files
+*.gcda
+*.gcno
 
 # Kernel Module Compile Results
 *.mod*
