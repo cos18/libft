@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_bonus.h                                      :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 21:06:08 by sunpark           #+#    #+#             */
-/*   Updated: 2020/03/01 23:18:54 by sunpark          ###   ########.fr       */
+/*   Created: 2020/03/01 16:10:31 by sunpark           #+#    #+#             */
+/*   Updated: 2020/03/01 16:12:44 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_BONUS_H
-# define LIBFT_BONUS_H
+#include "libft.h"
+#include <stdlib.h>
 
-int ft_isupper(int c);
-int ft_islower(int c);
-int ft_isnumber(int c);
-int ft_isblank(int c);
-
-#endif
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (!lst)
+		return ;
+	(*del)(lst->content);
+	free(lst);
+}

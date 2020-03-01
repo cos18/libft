@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_bonus.h                                      :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 21:06:08 by sunpark           #+#    #+#             */
-/*   Updated: 2020/03/01 23:18:54 by sunpark          ###   ########.fr       */
+/*   Created: 2020/03/01 15:24:50 by sunpark           #+#    #+#             */
+/*   Updated: 2020/03/01 15:41:51 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_BONUS_H
-# define LIBFT_BONUS_H
+#include "libft.h"
 
-int ft_isupper(int c);
-int ft_islower(int c);
-int ft_isnumber(int c);
-int ft_isblank(int c);
-
-#endif
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (!new || !lst)
+		return ;
+	if (*lst)
+		new->next = *lst;
+	else
+		new->next = NULL;
+	*lst = new;
+}

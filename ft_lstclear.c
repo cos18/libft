@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_bonus.h                                      :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 21:06:08 by sunpark           #+#    #+#             */
-/*   Updated: 2020/03/01 23:18:54 by sunpark          ###   ########.fr       */
+/*   Created: 2020/03/01 16:13:19 by sunpark           #+#    #+#             */
+/*   Updated: 2020/03/01 16:23:00 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_BONUS_H
-# define LIBFT_BONUS_H
+#include "libft.h"
+#include <stdlib.h>
 
-int ft_isupper(int c);
-int ft_islower(int c);
-int ft_isnumber(int c);
-int ft_isblank(int c);
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	t_list	*now;
+	t_list	*next;
 
-#endif
+	now = *lst;
+	while (now)
+	{
+		next = now->next;
+		ft_lstdelone(now, del);
+		now = next;
+	}
+	*lst = NULL;
+}

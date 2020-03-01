@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_bonus.h                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 21:06:08 by sunpark           #+#    #+#             */
-/*   Updated: 2020/03/01 23:18:54 by sunpark          ###   ########.fr       */
+/*   Created: 2020/03/01 15:20:37 by sunpark           #+#    #+#             */
+/*   Updated: 2020/03/01 15:23:04 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_BONUS_H
-# define LIBFT_BONUS_H
+#include "libft.h"
+#include <stdlib.h>
 
-int ft_isupper(int c);
-int ft_islower(int c);
-int ft_isnumber(int c);
-int ft_isblank(int c);
-
-#endif
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*result;
+	result = (t_list *)malloc(sizeof(t_list));
+	if (result)
+	{
+		result->content = content;
+		result->next = NULL;
+	}
+	return (result);
+}

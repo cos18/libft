@@ -6,7 +6,7 @@
 #    By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/25 11:37:14 by sunpark           #+#    #+#              #
-#    Updated: 2020/02/28 23:09:54 by sunpark          ###   ########.fr        #
+#    Updated: 2020/03/01 23:20:02 by sunpark          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,11 @@ TOBJS	= $(TSTS:.c=.o)
 TGCNOS	= $(TSTS:.c=.gcno)
 TGCDAS	= $(TSTS:.c=.gcda)
 
-BSRCS	= ft_isupper_bonus.c ft_islower_bonus.c
+BSRCS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+		  ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+		  ft_lstmap.c \
+		  ft_isupper_bonus.c ft_islower_bonus.c ft_isnumber_bonus.c \
+		  ft_isblank_bonus.c
 BOBJS	= $(BSRCS:.c=.o)
 
 NAME	= libft.a
@@ -47,13 +51,11 @@ RM		= rm -f
 
 $(NAME):	$(OBJS)
 			ar rc $(NAME) $(OBJS)
-			ranlib $(NAME)
 
 all:		$(NAME)
 
 bonus:		$(OBJS) $(BOBJS)
 			ar rc $(NAME) $(BOBJS) $(OBJS)
-			ranlib $(NAME)
 
 $(TSTNAME):	$(OBJS) $(TOBJS)
 			$(GCC) $(OBJS) $(TOBJS) $(TSTFLAG) -o $(TSTNAME)
