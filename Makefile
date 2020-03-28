@@ -6,7 +6,7 @@
 #    By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/25 11:37:14 by sunpark           #+#    #+#              #
-#    Updated: 2020/03/14 23:21:01 by sunpark          ###   ########.fr        #
+#    Updated: 2020/03/28 23:44:46 by sunpark          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ BSRCS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 		  ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
 		  ft_lstmap.c \
 		  ft_isupper_bonus.c ft_islower_bonus.c ft_isnumber_bonus.c \
-		  ft_isblank_bonus.c ft_strndup_bonus.c
+		  ft_isblank_bonus.c ft_strndup_bonus.c ft_strnul_bonus.c \
+		  ft_strpush_bonus.c get_next_line_bonus.c
 BOBJS	= $(BSRCS:.c=.o)
 
 NAME	= libft.a

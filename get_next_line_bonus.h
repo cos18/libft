@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_bonus.h                                      :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 21:06:08 by sunpark           #+#    #+#             */
-/*   Updated: 2020/03/28 23:44:13 by sunpark          ###   ########.fr       */
+/*   Created: 2020/03/22 17:20:16 by sunpark           #+#    #+#             */
+/*   Updated: 2020/03/28 23:42:45 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_BONUS_H
-# define LIBFT_BONUS_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
+# include <unistd.h>
 # include <stdlib.h>
-# include "get_next_line_bonus.h"
+# include <fcntl.h>
 
-int		ft_isupper(int c);
-int		ft_islower(int c);
-int		ft_isnumber(int c);
-int		ft_isblank(int c);
-char	*ft_strpush(char *s, int push);
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
+# define FD_SIZE 1024
+# define READ 1
+# define READ_EOF 0
+# define ERROR -1
 
-char	*ft_strndup(const char *s1, size_t n);
-char	*ft_strnul(void);
+int		get_next_line(int fd, char **line);
 
 #endif
