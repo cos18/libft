@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 20:39:22 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/26 20:45:42 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/03 23:15:39 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	locate = -1;
 	while (++locate < n)
 	{
-		if (((unsigned char *)s1)[locate] != ((unsigned char *)s2)[locate]) 
-			break;
+		if (((unsigned char *)s1)[locate] != ((unsigned char *)s2)[locate])
+			break ;
 	}
 	if (locate == n)
 		return (0);

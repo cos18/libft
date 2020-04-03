@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 17:49:32 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/27 21:22:49 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/03 23:16:55 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t  locate;
+	size_t	locate;
 
 	if (!dst || !src)
 		return (0);

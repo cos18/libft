@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 19:56:06 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/26 20:17:12 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/03 23:14:17 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (++locate < n)
 	{
 		if (*((unsigned char *)find) == (unsigned char)c)
-			break;
+			break ;
 		find++;
 	}
 	if (locate == n)

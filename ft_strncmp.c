@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 17:21:40 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/27 17:33:56 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/03 23:20:24 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (++locate < n && *s1 && *s2)
 	{
 		if (*s1 != *s2)
-			break;
+			break ;
 		s1++;
 		s2++;
 	}

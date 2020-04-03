@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 21:57:59 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/28 22:29:02 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/03 23:19:34 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char		**ft_split(char const *s, char c)
 {
 	int		words;
 	char	**result;
-	
+
 	if (!s)
 		return (NULL);
 	words = count_words(s, c);

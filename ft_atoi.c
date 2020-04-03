@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 19:14:43 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/27 20:11:55 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/03 23:12:29 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	isblank(char a)
 			a == '\r' || a == '\n' || a == ' ');
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	unsigned long long	ans;
 	int					minus;
@@ -35,7 +35,7 @@ int	ft_atoi(const char *str)
 	while (*str)
 	{
 		if (ft_isdigit(*str) == 0)
-			break;
+			break ;
 		ans *= 10;
 		ans += (*str - '0');
 		str++;

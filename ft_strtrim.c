@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 21:40:40 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/28 22:03:04 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/03 23:21:16 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 		locate = -1;
 		if (start <= end)
 		{
-			while(++locate <= end - start)
+			while (++locate <= end - start)
 				result[locate] = s1[start + locate];
 		}
 		result[((locate == -1) ? 0 : locate)] = '\0';

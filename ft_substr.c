@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 20:53:26 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/27 21:21:54 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/03 23:21:00 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*result;
 	size_t	locate;
 	size_t	totsize;
-	
+
 	if (!s)
 		return (NULL);
 	locate = ft_strlen(s);

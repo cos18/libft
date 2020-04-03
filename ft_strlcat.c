@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:55:54 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/27 18:57:33 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/03 23:17:35 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t	strsize[2];
+	size_t	strsize[2];
 	size_t	cat_lo;
 
 	strsize[0] = ft_strlen(dst);

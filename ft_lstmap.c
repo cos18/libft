@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 16:26:05 by sunpark           #+#    #+#             */
-/*   Updated: 2020/03/01 17:23:44 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/03 23:13:24 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		after = ft_lstnew((*f)(now->content));
 		if (!after)
-			break;
+			break ;
 		ft_lstadd_back(&result, after);
 		now = now->next;
 	}

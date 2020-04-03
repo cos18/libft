@@ -6,11 +6,10 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 23:11:01 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/28 23:57:14 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/02 22:28:36 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)

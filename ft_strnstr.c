@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 19:01:28 by sunpark           #+#    #+#             */
-/*   Updated: 2020/02/27 19:11:19 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/03 23:18:33 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    size_t	locate;
+	size_t	locate;
 	char	*find;
 	size_t	now;
 
