@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 21:06:08 by sunpark           #+#    #+#             */
-/*   Updated: 2020/03/28 23:44:13 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/08 01:18:59 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_BONUS_H
 
 # include <stdlib.h>
-# include "get_next_line_bonus.h"
 
 int		ft_isupper(int c);
 int		ft_islower(int c);
