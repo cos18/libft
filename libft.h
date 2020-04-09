@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 11:39:22 by sunpark           #+#    #+#             */
-/*   Updated: 2020/04/03 23:24:09 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/09 10:36:34 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <stdlib.h>
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -67,5 +68,14 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 								void (*del)(void *));
+
+int					ft_isupper(int c);
+int					ft_islower(int c);
+int					ft_isnumber(int c);
+int					ft_isblank(int c);
+char				*ft_strpush(char *s, int push);
+
+char				*ft_strndup(const char *s1, size_t n);
+char				*ft_strnul(void);
 
 #endif

@@ -6,11 +6,11 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 21:55:12 by sunpark           #+#    #+#             */
-/*   Updated: 2020/03/01 23:18:03 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/09 10:37:23 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 int	ft_islower(int c)
 {

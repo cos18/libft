@@ -6,11 +6,11 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 17:48:03 by sunpark           #+#    #+#             */
-/*   Updated: 2020/04/03 23:12:56 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/09 10:37:17 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 int	ft_isblank(int c)
 {
