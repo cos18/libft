@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 21:57:59 by sunpark           #+#    #+#             */
-/*   Updated: 2020/04/03 23:19:34 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/13 13:29:48 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,33 @@ static int	count_words(char const *s, char c)
 	return (result);
 }
 
-static void	get_sep_word(char **sep, char const *s, char c)
+static int	free_strs(char **sep, int word_locate)
+{
+	int	locate;
+
+	locate = -1;
+	while (++locate < word_locate - 1)
+		free(sep[locate]);
+	return (1);
+}
+
+static int	get_sep_word(char **sep, char const *s, char c)
 {
 	int		word_size;
+	int		word_locate;
 	char	*start;
 
 	word_size = 0;
-	while (*s == c)
-		s++;
+	word_locate = 0;
 	while (*s)
 	{
 		if (word_size == 0 && *s != c)
 			start = (char *)s;
 		if (word_size && *s == c)
 		{
-			*(sep++) = ft_substr(start, 0, word_size);
+			sep[word_locate] = ft_substr(start, 0, word_size);
+			if (sep[word_locate++] == NULL)
+				return (free_strs(sep, word_locate));
 			word_size = 0;
 		}
 		if (*s != c)
@@ -58,8 +70,9 @@ static void	get_sep_word(char **sep, char const *s, char c)
 		s++;
 	}
 	if (word_size)
-		*(sep++) = ft_substr(start, 0, word_size);
-	*sep = NULL;
+		sep[word_locate++] = ft_substr(start, 0, word_size);
+	sep[word_locate] = NULL;
+	return (0);
 }
 
 char		**ft_split(char const *s, char c)
@@ -71,7 +84,10 @@ char		**ft_split(char const *s, char c)
 		return (NULL);
 	words = count_words(s, c);
 	result = (char **)malloc(sizeof(char *) * (words + 1));
-	if (result)
-		get_sep_word(result, s, c);
+	if (result && get_sep_word(result, s, c))
+	{
+		free(result);
+		result = NULL;
+	}
 	return (result);
 }
