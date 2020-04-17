@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 11:39:22 by sunpark           #+#    #+#             */
-/*   Updated: 2020/04/09 10:36:34 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/04/17 23:08:18 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+
+# define BUFFER_SIZE 1024
+# define FD_SIZE 1024
+# define READ 1
+# define READ_EOF 0
+# define ERROR -1
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -77,5 +85,6 @@ char				*ft_strpush(char *s, int push);
 
 char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strnul(void);
+int					get_next_line(int fd, char **line);
 
 #endif
