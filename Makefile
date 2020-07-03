@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+         #
+#    By: sunpark <sunpark@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/25 11:37:14 by sunpark           #+#    #+#              #
-#    Updated: 2020/04/17 23:07:56 by sunpark          ###   ########.fr        #
+#    Updated: 2020/07/03 21:36:54 by sunpark          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,13 @@ BSRCS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 		  ft_strpush_bonus.c get_next_line_bonus.c
 BOBJS	= $(BSRCS:.c=.o)
 
+PSRCDIR	= ./ft_printf/
+PSRC	= ft_printf percent print_ascii print_element print_num \
+		  print_num print_pointer take_percentage
+PSUF	= _bonus.c
+PSRCS	= $(addprefix $(PSRCDIR), $(addsuffix $(PSUF), $(PSRC)))
+POBJS	= $(PSRCS:.c=.o)
+
 NAME	= libft.a
 
 GCC		= gcc
@@ -41,12 +48,11 @@ $(NAME):	$(OBJS)
 
 all:		$(NAME)
 
-bonus:		$(OBJS) $(BOBJS)
-			ar rc $(NAME) $(BOBJS) $(OBJS)
+bonus:		$(OBJS) $(BOBJS) $(POBJS)
+			ar rc $(NAME) $(BOBJS) $(OBJS) $(POBJS)
 
 clean:
-			$(RM) $(OBJS) $(TOBJS) $(GCNOS) $(TGCNOS) $(GCDAS) $(TGCDAS)
-			$(RM) $(BOBJS)
+			$(RM) $(OBJS) $(BOBJS) $(POBJS)
 
 fclean:		clean
 			$(RM) $(NAME) $(TSTNAME)

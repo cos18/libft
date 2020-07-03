@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sunpark <sunpark@student.42.kr>            +#+  +:+       +#+        */
+/*   By: sunpark <sunpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 11:39:22 by sunpark           #+#    #+#             */
-/*   Updated: 2020/04/17 23:08:18 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/07/03 21:39:09 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,7 @@ char				*ft_strpush(char *s, int push);
 char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strnul(void);
 int					get_next_line(int fd, char **line);
+
+int					ft_printf(const char *format, ...);
 
 #endif
