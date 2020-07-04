@@ -6,7 +6,7 @@
 #    By: sunpark <sunpark@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/25 11:37:14 by sunpark           #+#    #+#              #
-#    Updated: 2020/07/03 21:36:54 by sunpark          ###   ########.fr        #
+#    Updated: 2020/07/04 14:59:45 by sunpark          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ BSRCS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 BOBJS	= $(BSRCS:.c=.o)
 
 PSRCDIR	= ./ft_printf/
-PSRC	= ft_printf percent print_ascii print_element print_num \
+PSRC	= ft_printf percent print_ascii print_element print_hex \
 		  print_num print_pointer take_percentage
 PSUF	= _bonus.c
 PSRCS	= $(addprefix $(PSRCDIR), $(addsuffix $(PSUF), $(PSRC)))

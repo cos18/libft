@@ -6,7 +6,7 @@
 /*   By: sunpark <sunpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 15:42:45 by sunpark           #+#    #+#             */
-/*   Updated: 2020/07/03 21:38:38 by sunpark          ###   ########.fr       */
+/*   Updated: 2020/07/04 13:33:17 by sunpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ typedef struct	s_percent
 	int			precision;
 }				t_percent;
 
-int				ft_printf(const char *format, ...);
 int				print_percent(const char **format, va_list args_list);
 
 t_percent		*create_percent(void);
